@@ -1,0 +1,69 @@
+{{ partial "mainpage_header.html" . }}
+
+{{if .Site.Params.cover}}
+<header class="main-header " style="background-image: url({{.Site.BaseURL}}{{.Site.Params.cover}})">
+
+{{else}}
+<header class="main-header ">
+{{end}}
+
+
+    <nav class="main-nav overlay clearfix">
+        {{ if .Site.Params.logo }}
+            <a class="blog-logo" href="{{ .Permalink }}"><img src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Blog Logo" /></a>
+        {{end}}
+        <a class="button" href="https://github.com/libreswitch"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
+        <a class="button" href="#"><i class="fa fa-users" aria-hidden="true"></i> Community</a>
+        <a class="button" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> Install</a>
+        <a class="button" href="/docs"><i class="fa fa-book" aria-hidden="true"></i> Docs</a>
+
+<!--
+<a class="menu-button" href="#"><span class="burger">&#9776;</span>About</a>
+        {{ if .Site.Menus.main }}
+            <a class="menu-button" href="#"><span class="burger">&#9776;</span><span class="word">Menu</span></a>
+        {{else}}
+            {{ if .Site.Params.RSSLink}}
+              <a class="menu-button icon-feed" href="{{.Site.Params.RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+            {{else}}
+              <a class="menu-button icon-feed" href="{{ .RSSLink }}">&nbsp;&nbsp;Subscribe</a>
+            {{end}}
+        {{end}}
+-->
+    </nav>
+<div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="page-title">
+              <a class="btn-bootstrap-2 title-scroll" href="#content">{{ .Site.Title }}</a>
+          </h1>
+          <hr>
+          <h2 class="page-description">{{ .Site.Params.description }}</h2>
+        </div>
+</div>
+
+</header>
+<!--
+<main id="content" class="content" role="main">
+
+    {{ $paginator := .Paginate (where .Data.Pages "Section" "post") }}
+
+    <div class="extra-pagination inner">
+        {{ partial "pagination.html" $paginator }}
+    </div>
+
+    {{ range $index, $page := $paginator.Pages }}
+        {{ .Render "li" }}
+    {{ end }}
+
+    {{ partial "pagination.html" $paginator }}
+
+</main>
+
+{{ partial "footer.html" . }}
+-->
+</div>
+<script type="text/javascript" src="{{.Site.BaseURL}}js/jquery.js"></script>
+<script type="text/javascript" src="{{.Site.BaseURL}}js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="{{.Site.BaseURL}}js/index.js"></script>
+
+</body>
+</html>
