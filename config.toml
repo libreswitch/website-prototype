@@ -1,0 +1,23 @@
+baseurl = "https://www.libreswitch.org/"
+languageCode = "en-us"
+title = "LibreSwitch"
+paginate = 5
+DisqusShortname = ""
+Copyright = "All rights reserved - 2017"
+canonifyurls = true
+
+[params]
+  description = "A Switch Network Operating System For The Rest Of Us"
+  #cover = "/images/LibreSwitchLogo.jpg"
+  author = ""
+  authorlocation = ""
+  authorwebsite = "http://syui.github.io/hugo-theme-air"
+  bio= ""
+  logo = "images/LibreSwitchLogoInverse.svg"
+  googleAnalyticsUserID = ""
+  # Optional RSS-Link, if not provided it defaults to the standard index.xml
+  RSSLink = ""
+  githubName = ""
+  twitterName = ""
+  # set true if you are not proud of using Hugo (true will hide the footer note "Proudly published with HUGO.....")
+  hideHUGOSupport = true
