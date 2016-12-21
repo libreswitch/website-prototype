@@ -13,9 +13,9 @@
             <a class="blog-logo" href="{{ .Permalink }}"><img src="{{ .Site.BaseURL }}{{.Site.Params.logo}}" alt="Blog Logo" /></a>
         {{end}}
         <a class="button" href="https://github.com/libreswitch"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a>
-        <a class="button" href="#"><i class="fa fa-users" aria-hidden="true"></i> Community</a>
-        <a class="button" href="#"><i class="fa fa-arrow-down" aria-hidden="true"></i> Install</a>
-        <a class="button" href="/docs"><i class="fa fa-book" aria-hidden="true"></i> Docs</a>
+        <a class="button" href="https://github.com/libreswitch/libreswitch/wiki"><i class="fa fa-pencil" aria-hidden="true"></i> Wiki</a>
+        <a class="button" href="https://gitter.im/libreswitch/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link"><i class="fa fa-users" aria-hidden="true"></i> Gitter</a>
+        <a class="button" href="http://docs.libreswitch.org"><i class="fa fa-book" aria-hidden="true"></i> Docs</a>
 
 <!--
 <a class="menu-button" href="#"><span class="burger">&#9776;</span>About</a>
@@ -38,6 +38,13 @@
           <hr>
           <h2 class="page-description">{{ .Site.Params.description }}</h2>
         </div>
+<!--
+        <div class="bottom-inner">
+            <a href="https://www.netlify.com">
+              <img src="https://www.netlify.com/img/global/badges/netlify-dark.svg">
+            </a>
+        </div>
+-->
 </div>
 
 </header>
@@ -64,6 +71,11 @@
 <script type="text/javascript" src="{{.Site.BaseURL}}js/jquery.js"></script>
 <script type="text/javascript" src="{{.Site.BaseURL}}js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="{{.Site.BaseURL}}js/index.js"></script>
-
+<script>
+  ((window.gitter = {}).chat = {}).options = {
+    room: 'LibreSwitch/Lobby'
+  };
+</script>
+<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 </body>
 </html>
