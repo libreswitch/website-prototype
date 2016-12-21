@@ -1763,7 +1763,7 @@ body:not(.post-template) .post-title {
     .inner,
     .pagination {
         width: auto;
-        margin: 2rem auto;
+        margin: 10rem auto;
     }
 
     .post {
